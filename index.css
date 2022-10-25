@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*MAIN*/
+
+.body {
+  background-color: rgba(32, 32, 32, 0.897);
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.form {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding-bottom: 25px;
+}
+
+.input-text {
+  font-size: 1.5rem;
+  font-weight: 300;
+  border-radius: 5px;
+  background-color: #555555;
+  color: white;
+  text-align: center;
+}
+.title-h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    rgba(35, 99, 173, 1) 0%,
+    rgba(105, 242, 80, 1) 100%
+  );
+  -webkit-background-clip: text;
+}
+
+.boton-agregar {
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    rgba(35, 99, 173, 1) 0%,
+    rgba(105, 242, 80, 1) 100%
+  );
+  font-size: 1.3rem;
+  padding: 2px;
+  color: black;
+  border: none;
+  border-radius: 5px;
+}
+
+.boton-borrar-todo {
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    rgba(35, 99, 173, 1) 0%,
+    rgba(105, 242, 80, 1) 100%
+  );
+  font-size: 1.3rem;
+  padding: 3px;
+  color: black;
+  border: none;
+  border-radius: 5px;
+}
+
+.seccion-tareas {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.lista-de-tareas {
+  min-height: 20vh;
+}
+
+.hidden {
+  display: flex;
+}
+
+/*FOOTER*/
+
+.footer {
+  width: 100%;
+  padding: 10px;
+}
+
+.footer-copyright {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-top: 30px;
+}
+
+.enlace-desarrollador {
+  text-decoration: none;
+  font-weight: 600;
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    rgba(35, 99, 173, 1) 0%,
+    rgba(105, 242, 80, 1) 100%
+  );
+  -webkit-background-clip: text;
+}
+
+/*HOVER*/
+
+.boton-agregar:hover {
+  scale: 1.2;
+}
+
+.boton-borrar-todo:hover {
+  scale: 1.2;
+}
+
+@media (min-width: 280px) {
+  .form {
+    flex-direction: column;
+  }
+}
