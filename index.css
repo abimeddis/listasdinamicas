@@ -86,6 +86,8 @@
 /* CAMBIAR POR " .lista-de-tareas */
 .task-list {
   min-height: 20vh;
+  display: flex;
+  justify-content: center;
 }
 
 .hidden {
@@ -108,9 +110,8 @@
   -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   border-radius: 5px;
-  min-width: 60vh;
+  min-width: 70%;
   padding: 2px;
-  text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -158,9 +159,5 @@
 @media (min-width: 200px) and (max-width: 450px) {
   .add-form {
     flex-direction: column;
-  }
-
-  .listita {
-    width: 100%;
   }
 }
