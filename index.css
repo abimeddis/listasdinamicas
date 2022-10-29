@@ -155,8 +155,12 @@
   scale: 1.2;
 }
 
-@media (min-width: 280px) {
-  .form {
+@media (min-width: 200px) and (max-width: 450px) {
+  .add-form {
     flex-direction: column;
+  }
+
+  .listita {
+    width: 100%;
   }
 }
