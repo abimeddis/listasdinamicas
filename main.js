@@ -10,7 +10,7 @@ const saveLocalStorage = (tasksList) => {
 };
 
 const createTask = (task) =>
-  `<li class="listita">${task.name}<img class="delete-btn" src="./delete.svg.svg" alt="boton de borrar" data-name="${task.name}"></li>`;
+  `<li class="listita">${task.name} <img class="delete-btn" src="./delete.svg.svg" alt="boton de borrar" data-name="${task.name}"></li>`;
 
 const renderTasksList = (todoList) => {
   tasksList.innerHTML = todoList.map((task) => createTask(task)).join("");
@@ -59,6 +59,7 @@ const removeAll = () => {
   saveLocalStorage(tasks);
   hideDeleteAll(tasks);
 };
+
 const init = () => {
   renderTasksList(tasks);
   addForm.addEventListener("submit", addTask);

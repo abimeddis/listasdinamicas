@@ -91,7 +91,7 @@
 }
 
 .hidden {
-  display: flex;
+  display: none;
 }
 
 .delete-btn {
