@@ -13,11 +13,11 @@ const guardarEnLocalStorage = (LISTADETAREAS) => {
 };
 
 const crearTarea = (tareas) => {
-  `<li> ${tareas.name}<img class="delete-btn" src="./delete.sv.svg" alt="Boton de borrar" data-id=${tareas.tareaId}></li>`;
+  `<li class="listita"> ${tareas.name}<img class="delete-btn" src="./delete.svg.svg" alt="Boton de borrar" data-name=${tareas.name}></li>`;
 };
 
-const renderizarLista = (todoList) => {
-  LISTADETAREAS.innerHTML = todoList
+const renderizarLista = (todolist) => {
+  LISTADETAREAS.innerHTML = todolist
     .map((tareas) => crearTarea(tareas))
     .join("");
 };
@@ -32,21 +32,21 @@ const ocultarBorrarTodo = (LISTADETAREAS) => {
 
 const agregarTarea = (evento) => {
   evento.preventDefault();
-  const nombreDeTarea = INPUT.value.trim();
+  const nombreDeTarea = INPUT.value.trim().replace(/\s+/g, " ");
 
   if (!nombreDeTarea.length) {
     alert("Por favor, ingrese una tarea");
     return;
   } else if (
     tareas.some(
-      (tarea) => tarea.name.toLowerCase() === nombreDeTarea.toLowerCase()
+      (tareas) => tareas.name.toLowerCase() === nombreDeTarea.toLowerCase()
     )
   ) {
     alert("Ya existe una tarea con ese nombre");
     return;
   }
 
-  tareas = [...tareas, { name: nombreDeTarea, tareaId: tareas.length + 1 }];
+  tareas = [...tareas, { name: nombreDeTarea }];
   INPUT.value = "";
   renderizarLista(tareas);
   guardarEnLocalStorage(tareas);
@@ -55,8 +55,10 @@ const agregarTarea = (evento) => {
 
 const borrarTarea = (e) => {
   if (!e.target.classList.contains("delete-btn")) return;
-  const filterId = Number(e.target.dataset.id);
-  tareas = tareas.filter((tarea) => tarea.tareasId !== filterId);
+
+  const filtrarPorNombre = e.target.dataset.name;
+
+  tareas = tareas.filter((tarea) => tarea.name !== filtrarPorNombre);
   renderizarLista(tareas);
   guardarEnLocalStorage(tareas);
   ocultarBorrarTodo(tareas);
