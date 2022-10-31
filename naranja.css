@@ -16,15 +16,15 @@
   list-style: none;
 }
 
-.color-rosa {
+.color-verde {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 300;
   list-style: none;
   background: linear-gradient(
     90deg,
-    rgba(255, 22, 116, 1) 0%,
-    rgba(135, 24, 159, 1) 100%
+    rgba(35, 99, 173, 1) 0%,
+    rgba(105, 242, 80, 1) 100%
   );
   color: transparent;
   -webkit-background-clip: text;
@@ -39,12 +39,16 @@
   color: transparent;
 }
 
-.color-naranja {
+.color-rosita {
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 300;
   list-style: none;
-  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 22, 116, 1) 0%,
+    rgba(135, 24, 159, 1) 100%
+  );
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -83,21 +87,13 @@
   font-size: 3rem;
   font-weight: 600;
   color: transparent;
-  background: linear-gradient(
-    90deg,
-    rgba(35, 99, 173, 1) 0%,
-    rgba(105, 242, 80, 1) 100%
-  );
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
   -webkit-background-clip: text;
 }
 /* CAMBIAR POR " .boton-agregar " */
 .add-btn {
   color: transparent;
-  background: linear-gradient(
-    90deg,
-    rgba(35, 99, 173, 1) 0%,
-    rgba(105, 242, 80, 1) 100%
-  );
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
   font-size: 1.3rem;
   padding: 2px;
   color: black;
@@ -107,11 +103,7 @@
 /* CAMBIAR POR " .boton-borrar-todo " */
 .deleteAll-btn {
   color: transparent;
-  background: linear-gradient(
-    90deg,
-    rgba(35, 99, 173, 1) 0%,
-    rgba(105, 242, 80, 1) 100%
-  );
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
   font-size: 1.3rem;
   padding: 3px;
   color: black;
@@ -189,11 +181,7 @@
   text-decoration: none;
   font-weight: 600;
   color: transparent;
-  background: linear-gradient(
-    90deg,
-    rgba(35, 99, 173, 1) 0%,
-    rgba(105, 242, 80, 1) 100%
-  );
+  background: linear-gradient(90deg, #d53369 0%, #daae51 100%);
   -webkit-background-clip: text;
 }
 

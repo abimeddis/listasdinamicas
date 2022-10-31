@@ -2,6 +2,9 @@ const input = document.querySelector(".input-text");
 const addForm = document.querySelector(".add-form");
 const tasksList = document.querySelector(".tasks-list");
 const deleteBtn = document.querySelector(".deleteAll-btn");
+//const chequedBtn = document.querySelector(".check");
+
+//console.log(chequedBtn);
 
 let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
@@ -10,7 +13,7 @@ const saveLocalStorage = (tasksList) => {
 };
 
 const createTask = (task) =>
-  `<li class="listita">${task.name} <img class="delete-btn" src="./delete.svg.svg" alt="boton de borrar" data-name="${task.name}"></li>`;
+  `<li class="listita">${task.name} <img class="check" src="./check2-square.svg"> <img class="delete-btn" src="./delete.svg.svg" alt="boton de borrar" data-name="${task.name}"></li>`;
 
 const renderTasksList = (todoList) => {
   tasksList.innerHTML = todoList.map((task) => createTask(task)).join("");
@@ -23,6 +26,24 @@ const hideDeleteAll = (tasksList) => {
   }
   deleteBtn.classList.remove("hidden");
 };
+
+//const chequedBackground = () => {
+//chequedBtn.addEventListener("clic", addClass());
+//return;
+
+//chequedBtn.addEventListener("clic", removeClass());
+//return;
+//};
+
+//const addClass = () => {
+//listita.classList.add("chequeado");
+//};
+
+//const removeClass = () => {
+//listita.classList.remove("chequeado");
+//};
+
+//chequedBackground();
 
 const addTask = (e) => {
   e.preventDefault();
@@ -44,14 +65,14 @@ const addTask = (e) => {
   hideDeleteAll(tasks);
 };
 
-const removeTask = (e) => {
+function removeTask(e) {
   if (!e.target.classList.contains("delete-btn")) return;
   const filterName = e.target.dataset.name;
   tasks = tasks.filter((task) => task.name !== filterName);
   renderTasksList(tasks);
   saveLocalStorage(tasks);
   hideDeleteAll(tasks);
-};
+}
 
 const removeAll = () => {
   tasks = [];
